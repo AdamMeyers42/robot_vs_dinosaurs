@@ -16,8 +16,9 @@ class Battlefield:
 
     def run_games(self):
         self.display_welcome()
-        for x in range(20):
+        for x in range(3):
             self.robo_turn(random.choice(self.fleet.robots))
+            self.dino_turn(random.choice(self.herd.dinosaurs))
 
     def display_welcome(self):
         print('Welcome to the ThunderDome! \n')
@@ -36,7 +37,18 @@ class Battlefield:
         pass
 
     def dino_turn(self, dinosaur):
-        dinosaur.attack(random.choice(self.fleet.robots))
+        robot = random.choice(self.fleet.robots)
+        dinosaur.attack(robot)
+        print(f'{dinosaur.name} attacked {robot.name} for {dinosaur.attack_power}!')
+        print(f'{robot.name}\'s life is now at {robot.health}')
+        if robot.health <= 0:
+            print('He dead')
+            self.fleet.robots.remove(robot)
+            print('Here are your remaining robots! \n')
+            for robot in self.fleet.robots:
+                 print(
+                    f'{robot.name}: hp - {robot.health} ap - {robot.weapon.attack_power}')
+
 
     def robo_turn(self, robot):
         dinosaur = random.choice(self.herd.dinosaurs)
