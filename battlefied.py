@@ -1,9 +1,14 @@
+from fleet import Fleet
+
 class Battlefield:
     def __init__(self):
         pass
 
     def run_games(self):
-        pass
+        fleet = Fleet
+        # How to create a fleet?
+        fleet.create_fleet(fleet)
+        self.fleet = fleet
 
     def display_welcome(self):
         pass
