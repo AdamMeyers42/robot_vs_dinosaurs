@@ -2,4 +2,5 @@ from battlefied import Battlefield
 
 battlefield = Battlefield()
 battlefield.run_games()
-print(battlefield.fleet)
+for dinosaur in battlefield.herd.herd:
+    print(dinosaur.name)

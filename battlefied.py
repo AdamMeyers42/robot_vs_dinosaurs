@@ -1,14 +1,14 @@
-from fleet import Fleet
+# from fleet import Fleet
+from herd import Herd
 
 class Battlefield:
     def __init__(self):
-        pass
+        herd = Herd()
+        herd.create_herd()
+        self.herd = herd
 
     def run_games(self):
-        fleet = Fleet
-        # How to create a fleet?
-        fleet.create_fleet(fleet)
-        self.fleet = fleet
+        pass
 
     def display_welcome(self):
         pass
