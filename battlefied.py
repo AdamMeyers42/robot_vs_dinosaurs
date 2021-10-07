@@ -1,4 +1,4 @@
-# from fleet import Fleet
+from fleet import Fleet
 from herd import Herd
 
 class Battlefield:
@@ -6,6 +6,10 @@ class Battlefield:
         herd = Herd()
         herd.create_herd()
         self.herd = herd
+        
+        fleet = Fleet()
+        fleet.create_fleet()
+        self.fleet = fleet
 
     def run_games(self):
         pass

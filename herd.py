@@ -2,10 +2,10 @@ from dinosaur import Dinosaur
 
 class Herd:
     def __init__(self):
-        self.herd= []
+        self.dinosaurs= []
 
     def create_herd(self):
-        self.herd.append(Dinosaur('T-Rex', 10, 100))
-        self.herd.append(Dinosaur('Raptor', 10, 100))
-        self.herd.append(Dinosaur('CeraTops', 10, 100))
+        self.dinosaurs.append(Dinosaur('T-Rex', 10, 100))
+        self.dinosaurs.append(Dinosaur('Raptor', 10, 100))
+        self.dinosaurs.append(Dinosaur('CeraTops', 10, 100))
         
