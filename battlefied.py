@@ -16,9 +16,11 @@ class Battlefield:
 
     def run_games(self):
         self.display_welcome()
-        for x in range(3):
+        while (len(self.fleet.robots) > 0) and (len(self.herd.dinosaurs) > 0):
             self.robo_turn(random.choice(self.fleet.robots))
             self.dino_turn(random.choice(self.herd.dinosaurs))
+
+        self.display_winners()
 
     def display_welcome(self):
         print('Welcome to the ThunderDome! \n')
